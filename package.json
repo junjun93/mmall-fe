@@ -1,0 +1,25 @@
+{
+  "name": "mmall_front",
+  "version": "1.0.0",
+  "description": "mmall front end code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junjun93/mmall_front.git"
+  },
+  "keywords": [
+    "yes"
+  ],
+  "author": "junjun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junjun93/mmall_front/issues"
+  },
+  "homepage": "https://github.com/junjun93/mmall_front#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
