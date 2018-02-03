@@ -94,5 +94,11 @@ doLogin()
 goHome()
 var conf
 
-	
-	
+sudo -g 全局服务器，然后可以用命令 
+6.loyout.css head-common.html 
+index footer 28 overflow清除浮动css reset 定宽布局 全局通用样式
+隐藏类、超链样式 btn loading
+--save  font-awesome
+7.nav-simple+html 
+比利时-巧克力王国、世界史-希腊
+

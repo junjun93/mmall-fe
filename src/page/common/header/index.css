@@ -1,0 +1,28 @@
+/*
+    @Author: junjun
+    @Date: 2018/2/3
+    @Last Modified by: junjun
+    @Last Modified time: 2018/2/3
+*/
+/*通用头部导航*/
+.header .logo{
+    position:absolute;
+    left:60px;
+    top:34px;
+    display:block;
+    font-size:26px;
+    font-weight:bold;
+    color:#c60023;
+    text-decoration:none;
+}
+.header .search-con{
+    padding:40px 0 30px 250px;
+}
+.header .search-con .search-btn{
+    width:550px;
+    height:40px;
+    border:2px solid #c60023;
+    line-height:44px;
+    font-size:15px;
+}
+

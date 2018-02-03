@@ -2,14 +2,14 @@
     @Author: junjun
     @Date: 2018/2/1
 */
-var Hogan = require('hogan');
-var conf = {
+const Hogan = require('hogan.js');
+const conf = {
     serverHost: ''
 };
-var _mm = {
+const _mm = {
     //网络请求
     request: function(param){
-        var _this = this;
+        const _this = this;
         $.ajax({
             type        : param.method  || 'get',
             url         : param.url     || '',
