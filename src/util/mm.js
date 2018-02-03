@@ -2,6 +2,8 @@
     @Author: junjun
     @Date: 2018/2/1
 */
+'use strict';
+
 const Hogan = require('hogan.js');
 const conf = {
     serverHost: ''
@@ -59,9 +61,9 @@ const _mm = {
         alert(msg || '哪里不对了~');
     },
     //非空、手机号、邮箱验证
-    validate: function(type, value){
+    validate: function(value, type){
         var value = $.trim(value);
-        if('require' == value){
+        if('require' === value){
             return !!value;
         }
         if('phone' === type){

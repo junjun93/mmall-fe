@@ -23,7 +23,7 @@ const config = {
     entry: {
         'common': ['./src/page/common/index.js'],
         'index' : ['./src/page/index/index.js'],
-        'login' : ['./src/page/login/index.js']
+        // 'login' : ['./src/page/login/index.js']
     },
     output: {
         path        : __dirname + '/dist',
@@ -43,7 +43,7 @@ const config = {
                 })
             },
             {
-                test: /\.(png|jpg|gif|svg|woffd|eof|ttf|otf)\??.*$/, use: 'url-loader?limit=100&name=resource/[name].[ext]'
+                test: /\.(png|jpg|gif|svg|woff|eot|ttf|otf)\??.*$/, use: 'url-loader?limit=100&name=resource/[name].[ext]'
             },
         ]
     },
