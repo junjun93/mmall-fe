@@ -24,6 +24,7 @@ const config = {
         'common': ['./src/page/common/index.js'],
         'index' : ['./src/page/index/index.js'],
         // 'login' : ['./src/page/login/index.js']
+        'result' : ['./src/page/result/index.js']
     },
     output: {
         path        : __dirname + '/dist',
@@ -45,19 +46,22 @@ const config = {
             {
                 test: /\.(png|jpg|gif|svg|woff|eot|ttf|otf)\??.*$/, use: 'url-loader?limit=100&name=resource/[name].[ext]'
             },
+            {
+                test: /\.string$/, use: 'html-loader'
+            }
         ]
     },
     /*devServer: {
         contentBase: './dist/index.html',
         port: 8088
     },*/
-    resolve: {
-        alias: {
+    resolve : {
+        alias : {
             node_modules    : __dirname + '/node_modules',
-            util            : __dirname + 'src/util',
-            page            : __dirname + 'src/page',
-            server          : __dirname + 'src/server',
-            image           : __dirname + 'src/image'
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
         }
     },
     plugins: [
@@ -72,6 +76,7 @@ const config = {
 
         //html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     ]
 };
 if('dev' === WEBPACK_ENV){

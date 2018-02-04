@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <%=require('html-loader!./logout/head-common.html') %>
+    <title><%=htmlWebpackPlugin.options.title%> - MMall电商平台</title>
 </head>
 <body>
-    <%=require('html-loader!./logout/head-common.html') %>
-    <%=require('html-loader!./logout/header.html') %>
-    hello
-    <%=require('html-loader!./logout/nav-simple.html') %>
     <%=require('html-loader!./logout/nav.html') %>
+    <%=require('html-loader!./logout/header.html') %>
+    <%=require('html-loader!./logout/nav-side.html') %>
     <%=require('html-loader!./logout/footer.html') %>
 </body>
 </html>

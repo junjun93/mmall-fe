@@ -23,6 +23,9 @@
 
 /*导航链接部分*/
 .nav .nav-list{
+    float:right;
+}
+.nav .nav-list .nav-item{
     display:inline-block;
     margin-left:5px;
 }

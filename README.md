@@ -44,7 +44,8 @@ console: cmd+option+j
     安装node.js
     2.npm init
     初始化npm	
-	3.npm install --save-dev  webpack 
+	3.sudo npm install -g webpack
+	  npm install --save-dev webpack 
 	  npm install --save lodash
 	防止本地环境与部署环境版本不一致
 	
@@ -78,6 +79,7 @@ console: cmd+option+j
 6.开发
     
     4.使用webpack-dev-server
+        sudo npm install -g webpack-dev-server
         npm install --save-dev webpack-dev-server
 
 四.通用功能开发
@@ -113,11 +115,29 @@ sudo→用做命令行
 user-service.js 
 cart-service.js
 
-1.font-awesome报错
+1.webpack启动失败
+    
+    更改配置文件中output下的path   : __dirname + '/dist',
+    
+2.font-awesome报错
     
     更改配置文件中plugin下的url-loader匹配正则
 
-2.css样式部分匹配
+3.css样式部分匹配
 
-    index/index.js引入未使用的index.js
+    index/index.js引入common里面未使用的index.js
+    更改错误路径(恶补相对路径、绝对路径)
+    
+4.You may need an appropriate loader to handle this file type.
 
+WebStorm快捷键
+    
+    command+option+down 复制整行
+    option+click(鼠标左键) 多光标操作
+$.entend() 比较对象 渲染导航菜单
+index.string→li # / hogan navSide.init()
+result .page-wrap .result-con .result-title.result-link $(function(){})页面打开就加载
+
+
+
+问题： mm_js header_js nav-size_js

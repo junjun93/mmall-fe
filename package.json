@@ -34,7 +34,8 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "hogan": "^1.0.2",
+    "hogan.js": "latest",
     "lodash": "^4.17.4",
-    "hogan.js": "latest"
+    "page": "^1.8.3"
   }
 }

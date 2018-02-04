@@ -42,8 +42,12 @@ const _mm = {
     },
     //获取url参数 4-3 03:28
     getUrlParam: function(name){
-        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
-        var result = window.location.search.substr(1).match(reg);
+        // var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+        // var result = window.location.search.substr(1).match(reg);
+        // return result ? decodeURIComponent(result[2]) : null;
+
+        var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+        var result  = window.location.search.substr(1).match(reg);
         return result ? decodeURIComponent(result[2]) : null;
     },
     //渲染html模板

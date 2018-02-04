@@ -6,8 +6,9 @@
 */
 'use strict';
 require("./index.css");
-const _mm = require('util/mm.js');
-const _user = require('server/user-server.js');
+const _mm = require('../../../util/mm.js');
+const _user = require('../../../service/user-service.js');
+const _cart = require('../../../service/cart-service');
 const nav = {
     init: function(){
         this.bindEvent();
@@ -25,7 +26,7 @@ const nav = {
             window.location.href = './user-register.html';
         });
         $('.js-logout').click(function(){
-            _user.logout(function(res){
+            _user.logout(function(){
                 window.location.reload();
             },function(errMsg){
                 _mm.errorTips(errMsg);
@@ -35,14 +36,18 @@ const nav = {
     //加载用户信息
     loadUserInfo: function(){
         _user.checkLogin(function(res){
-
+            $('.user.no-login').hide().siblings('.user.login').show().find('username').text(res.username);
         },function(errMsg){
             //do nothing
         });
     },
     //加载购物车数量
     loadCartCount: function(){
-
+        _cart.getCartCount(function(res){
+            $('.nav .cart-count').text(res || 0);
+        },function(){
+            $('.nav .cart-count').text(0);
+        });
     }
 };
 module.exports = nav.init();
