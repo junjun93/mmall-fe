@@ -29,6 +29,20 @@ input[type='checkbox']{
     overflow:hidden;
 }
 
+/*panel*/
+.panel{
+    padding:10px;
+    margin-bottom:10px;
+    background:#fff;
+}
+.panel .panel-title{
+    padding:10px;
+    font-size:14px;
+    font-weight:bold;
+    color:#666;
+    border-bottom:1px solid #eee;
+}
+
 /*全局通用样式*/
 /*隐藏类*/
 .hide{
@@ -79,5 +93,5 @@ input[type='checkbox']{
     border:1px solid #ddd;
     border-radius:5px;
     background:url('../../image/icon/loading.gif') no-repeat;
-    optity: .6;
+    opacity: .6;
 }

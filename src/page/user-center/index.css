@@ -1,0 +1,18 @@
+/*
+    @Author: junjun
+    @Date: 2018/2/5
+    @Last Modified by: junjun
+    @Last Modified time: 2018/2/5
+*/
+
+/*个人中心*/
+.form-line{
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+}
+.font-size .label{
+    display:inline-block;
+    width:60px;
+    text-algin:center;
+}
