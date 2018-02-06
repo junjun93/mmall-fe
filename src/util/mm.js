@@ -49,20 +49,20 @@ const _mm = {
     //渲染html模板
     renderHtml: function(htmlTemplate, data){
         var template = Hogan.compile(htmlTemplate);
-        var result = template.render(data);
-        return result;
+             var r = template.render(data);
+        return r;
     },
     //成功提示
     successTips: function(msg){
         alert(msg || '操作成功！');
     },
     //失败提示
-    errorTips: function(){
+    errorTips: function(msg){
         alert(msg || '哪里不对了~');
     },
     //非空、手机号、邮箱验证
-    validate: function(value, type){
-        var value = $.trim(value);
+    validate: function(v, type){
+        var value = $.trim(v);
         if('require' === value){
             return !!value;
         }
