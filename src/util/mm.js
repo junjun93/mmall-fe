@@ -4,7 +4,7 @@
 */
 'use strict';
 
-const Hogan = require('hogan.js');
+var hogan = require('hogan.js');
 const conf = {
     serverHost: ''
 };
@@ -48,9 +48,9 @@ const _mm = {
     },
     //渲染html模板
     renderHtml: function(htmlTemplate, data){
-        var template = Hogan.compile(htmlTemplate);
-             var r = template.render(data);
-        return r;
+        var template = hogan.compile(htmlTemplate);
+        var result = template.render(data);
+        return result;
     },
     //成功提示
     successTips: function(msg){

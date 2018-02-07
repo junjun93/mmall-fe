@@ -11,6 +11,7 @@ require('page/common/nav-side/index.css');
 require('./index.css');
 require('page/common/nav-simple/index.js');
 const _mm = require('util/mm.js');
+const _user = require('service/user-service.js');
 
 const formError = {
     show: function(errMsg){

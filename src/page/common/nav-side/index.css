@@ -8,7 +8,7 @@
 .nav-side{
     float:left;
     width:130px;
-    min-height:100px;
+    height:100px;
 }
 .nav-side .nav-item{
     line-height:25px;

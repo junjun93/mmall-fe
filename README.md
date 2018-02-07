@@ -81,6 +81,9 @@ console: cmd+option+j
     4.使用webpack-dev-server
         sudo npm install -g webpack-dev-server
         npm install --save-dev webpack-dev-server
+        
+        npm install hogan
+
 
 四.通用功能开发
  交互设计，弱化导航栏 蓝白+灰
@@ -134,13 +137,8 @@ WebStorm快捷键
     
     command+option+down 复制整行
     option+click(鼠标左键) 多光标操作
-$.entend() 比较对象 渲染导航菜单
-index.string→li # / hogan navSide.init()
-result .page-wrap .result-con .result-title.result-link $(function(){})页面打开就加载
-
 最外层容器input行高、字体不继承
-password-confirm blur change
-user-center 个人中心-crumb u-c-update
-w.css panel 个人中心string 
+
+    unslider nav-side显示失败
 
 问题： mm_js header_js nav-size_js
