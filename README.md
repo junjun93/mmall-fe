@@ -132,13 +132,20 @@ cart-service.js
     更改错误路径(恶补相对路径、绝对路径)
     
 4.You may need an appropriate loader to handle this file type.
+    
+    少正则
+
+5.nav-side显示失败
+ 
+    hogan.js没问题，漏代码不报错
+    
+6.类选择器漏写.，使登录信息加载失败
 
 WebStorm快捷键
     
     command+option+down 复制整行
     option+click(鼠标左键) 多光标操作
-最外层容器input行高、字体不继承
+a字体不继承，input行高、字体不继承
 
-    unslider nav-side显示失败
+    unslider 
 
-问题： mm_js header_js nav-size_js

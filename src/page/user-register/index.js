@@ -15,7 +15,7 @@ const formError = {
         $('.error-item').show().find('.err-msg').text(errMsg);
     },
     hide: function(){
-        $('.error-item').hide().find('.err-msg').text();
+        $('.error-item').hide().find('.err-msg').text('');
     }
 }
 
@@ -25,19 +25,62 @@ const page = {
     },
     bindEvent: function(){
         var _this = this;
+
         $('#username').blur(function(){
             var username = $.trim($(this).val());
-            // 如果用户名我们不做验证
+            // 如果用户名为空，我们不做验证
             if(!username){
                 return;
             }
             // 异步验证用户名是否存在
-            _user.checkUsername(username, function(){
+            _user.checkValid({
+                str     : username,
+                type    : 'username'
+            }, function(){
+                formError.hide();
+            }, function(errMsg){
+                formError.show(errMsg);
+            });
+
+        });
+        $('#email').blur(function(){
+            var email = $.trim($('#email').val());
+            _user.checkValid({
+                str     : email,
+                type    : 'email'
+            }, function(){
                 formError.hide();
             }, function(errMsg){
                 formError.show(errMsg);
             });
         });
+
+
+        /*
+        var array = {
+            a1: 'username',
+            a2: 'email'
+            //a3: phone
+        };
+        for(var k in array){
+            $('#'+k).blur(function(){
+                var field = $.trim($(this).val());
+                // 如果用户名为空，我们不做验证
+                if(!username){
+                    return;
+                }
+                // 异步验证用户名是否存在
+                _user.checkValid({
+                    str     : field,
+                    type    : k
+                }, function(){
+                    formError.hide();
+                }, function(errMsg){
+                    formError.show(errMsg);
+                });
+            });
+        }*/
+
         $('#submit').click(function(){
             _this.submit();
         });

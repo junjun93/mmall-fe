@@ -13,7 +13,7 @@ const nav = {
     init: function(){
         this.bindEvent();
         this.loadUserInfo();
-        this.loadCartCount();
+        //this.loadCartCount();
         return this;
     },
     bindEvent: function(){
@@ -36,7 +36,7 @@ const nav = {
     //加载用户信息
     loadUserInfo: function(){
         _user.checkLogin(function(res){
-            $('.user.no-login').hide().siblings('.user.login').show().find('username').text(res.username);
+            $('.user.not-login').hide().siblings('.user.login').show().find('.username').text(res.username);
         },function(errMsg){
             //do nothing
         });

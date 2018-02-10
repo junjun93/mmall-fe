@@ -49,8 +49,7 @@ const _mm = {
     //渲染html模板
     renderHtml: function(htmlTemplate, data){
         var template = hogan.compile(htmlTemplate);
-        var result = template.render(data);
-        return result;
+        return template.render(data);
     },
     //成功提示
     successTips: function(msg){
@@ -63,7 +62,8 @@ const _mm = {
     //非空、手机号、邮箱验证
     validate: function(v, type){
         var value = $.trim(v);
-        if('require' === value){
+        //value强转成布尔型
+        if('require' !== value){
             return !!value;
         }
         if('phone' === type){
@@ -78,20 +78,8 @@ const _mm = {
         window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome: function(){
-        window.location.href = './index.html';
+        window.location.href = './index.string';
     }
 };
 
 module.exports = _mm;
-/*
-* 1.mm.js 'use strict'
-    配置resolve-alias plugin前
-    request()getServerUrl()
-    getUrlParam()
-    renderHtml() --save hogan
-    successTips() errorTips()
-    validate()
-    doLogin()
-    goHome()
-    var conf
-* */

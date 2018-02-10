@@ -20,13 +20,10 @@ const _user = {
     },
 
     //检查用户名
-    checkUsername: function(resolve, reject){
+    checkValid: function(ValidMessage, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/user/check_valid.do'),
-            data    : {
-                type    : 'username',
-                str     : username
-            },
+            data    : ValidMessage,
             method  : 'POST',
             success : resolve,
             error   : reject

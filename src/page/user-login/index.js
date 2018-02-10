@@ -42,7 +42,7 @@ const page = {
         validateResult = this.formValidate(formData);
         if(validateResult.status){
             _user.login(formData, function(){
-                window.location.href = _mm.getUrlParam('redirect') || './index.html';
+                window.location.href = _mm.getUrlParam('redirect') || './index.string';
             }, function(errMsg){
                 formError.show(errMsg);
             });
@@ -55,7 +55,7 @@ const page = {
     formValidate: function(formData){
         var result = {
             status  : false,
-            msg     :''
+            msg     : ''
         };
         if(!_mm.validate(formData.username, 'require')){
             result.msg = '用户名不能为空';
