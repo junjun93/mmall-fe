@@ -6,9 +6,9 @@
 */
 'use strict';
 require("./index.css");
-const _mm = require('../../../util/mm.js');
-const _user = require('../../../service/user-service.js');
-const _cart = require('../../../service/cart-service');
+const _mm = require('util/mm.js');
+const _user = require('service/user-service.js');
+const _cart = require('service/cart-service.js');
 const nav = {
     init: function(){
         this.bindEvent();

@@ -1,0 +1,40 @@
+/*
+    @Author: junjun
+    @Date: 2018/2/13
+*/
+.pg-content{
+    text-align:center;
+    color:#333;
+}
+.page-content{
+    display:inline-block;
+    margin:0 2px;
+    padding:0 15px;
+    height:36px;
+    line-height:36px;
+    background:#eee;
+    border:1px solid #ccc;
+    cursor:pointer;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.pg-content .pg-item.disabled{
+    background:none;
+    color:#ccc;
+    cursor:auto;
+}
+.pg-content .pg-item.active{
+    background:none;
+    border:1px solid #f6f6f6;
+    cursor:auto;
+}
+.pg-content .pg-total{
+    margin-left: 10px;
+    background:none;
+    cursor:auto;
+}

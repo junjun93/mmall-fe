@@ -83,7 +83,10 @@ console: cmd+option+j
         npm install --save-dev webpack-dev-server
         
         npm install hogan
-
+        
+    5.引入sass
+        npm install gem
+        gem install sass
 
 四.通用功能开发
  交互设计，弱化导航栏 蓝白+灰

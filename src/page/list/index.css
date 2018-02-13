@@ -1,0 +1,92 @@
+/*
+    @Author: junjun
+    @Date: 2018/2/13
+*/
+
+/*排序按钮*/
+.sort-con{
+    overflow:auto;
+}
+.sort-con .sort-item{
+    position:relative;
+    float:left;
+    display:inline-block;
+    margin-right:-1px;
+    padding:0 8px;
+    height:24px;
+    line-height:24px;
+    color:#333;
+    background:#fff;
+    border:1px solid #ccc;
+    cursor:pointer;
+}
+.sort-con .sort-item.active{
+    color:#fff;
+    background:#c60023;
+    border:1px solid #c60023;
+}
+
+/*升降序*/
+.sort-con .sort-item .fa-sort-desc{
+    position:absolute;
+    top:8px;
+    right:8px;
+}
+.sort-con .sort-item.asc .fa-sort-desc{
+    opacity:.6;
+}
+.sort-con .sort-item.desc .fa-sort-asc{
+    opacity:.6;
+}
+
+/*列表*/
+.p-list-con{
+    margin-top:25px;
+    margin-right:-20px;
+    overflow:hidden;
+}
+.p-list-con .p-item{
+    position:relative;
+    float:left;
+    margin:0 20px 20px 0;
+    padding:10px;
+    width:180px;
+    background:#fff;
+}
+.p-list-con .p-item .p-img-con{
+    width:180px;
+    height:200px;
+}
+.p-list-con .p-item .p-img-con .p-img{
+    width:100%;
+    height:100%;
+}
+.p-list-con .p-item .p-price-con{
+    height:30px;
+    line-height:30px;
+}
+.p-list-con .p-item .p-price-con .p-price{
+    font-size:16px;
+    color:#e7380d;
+}
+.p-list-con .p-item .p-name-con{
+    height:40px;
+    overflow:hidden;
+}
+.p-list-con .p-item .p-name-con .p-name{
+    margin-bottom:10px;
+    line-height:20px;
+    color:#666;
+    text-decoration:none;
+}
+
+/*错误信息*/
+.err-tip{
+    height:60px;
+    font-size:16px;
+    font-weight:bold;
+    text-align:center;
+    line-height:60px;
+    color:#f60;
+    background:#eee;
+}
