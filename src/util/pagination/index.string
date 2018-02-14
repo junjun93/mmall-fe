@@ -5,7 +5,7 @@
         {{/disabled}}
         {{^disabled}}
             {{#active}}
-                <span class="pg-item active" data-type="{{value}}">{{name}}</span>            {{/active}}
+                <span class="pg-item active" data-type="{{value}}">{{name}}</span>
             {{^active}}
                 <span class="pg-item" data-type="{{value}}">{{name}}</span>
             {{/active}}

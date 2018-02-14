@@ -9,11 +9,12 @@ require("./index.css");
 const _mm = require('util/mm.js');
 const _user = require('service/user-service.js');
 const _cart = require('service/cart-service.js');
+
 const nav = {
     init: function(){
         this.bindEvent();
         this.loadUserInfo();
-        //this.loadCartCount();
+        this.loadCartCount();
         return this;
     },
     bindEvent: function(){

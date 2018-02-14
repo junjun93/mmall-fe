@@ -23,7 +23,7 @@ const Pagination = function(){
             return;
         }
         typeof _this.option.onSelectPage === 'function'
-            ? _this.option.onSelectPage($this.data('value')) : null;
+            ? _this.option.onSelectPage($this.data('value')) : null;//??
     });
 };
 
@@ -36,7 +36,7 @@ Pagination.prototype.render = function(userOption){
         return;
     }
     // 判断只有1项
-    if(this.option.page <= 1){
+    if(this.option.pages <= 1){
         return;
     }
     // 渲染分页内容
@@ -62,7 +62,7 @@ Pagination.prototype.getPaginationHtml = function(){
     for(var i = start; i <= end; i++){
         pageArray.push({
             name : i,
-            value :i,
+            value : i,
             active : (i === option.pageNum)
         });
     }

@@ -4,13 +4,12 @@
 */
 'use strict';
 require('./index.css');
-reuqire('page/common/nav/index.js');
+require('page/common/nav/index.js');
 require('page/common/header/index.js');
 const _mm = require('util/mm.js');
 const _product = require('service/product-service.js');
 const Pagination = require('util/pagination/index.js');
 const templateIndex = require('./index.string');
-
 
 const page = {
     data: {
@@ -18,8 +17,8 @@ const page = {
             keyword         : _mm.getUrlParam('keyword')    || '',
             categoryId      : _mm.getUrlParam('categoryId') || '',
             orderBy         : _mm.getUrlParam('orderBy')    || 'default',
-            pageNum         :_mm.getUrlParam('pageNum')     || 1,
-            pageSize        :_mm.getUrlParam('pageSize')    || 20
+            pageNum         : _mm.getUrlParam('pageNum')    || 1,
+            pageSize        : _mm.getUrlParam('pageSize')   || 20
         }
     },
     init: function(){
@@ -36,34 +35,34 @@ const page = {
         listParam.categoryId ? (delete listParam.keyword) : (delete listParam.categoryId);
         // 请求接口  res
         _product.getProductList(listParam, function(res){
-            var listHtml = _mm.renderHtml(templateIndex, {
+            listHtml = _mm.renderHtml(templateIndex, {
                 list : res.list
             });
             $pListCon.html(listHtml);
-            _this.loadPagination({
+            /*_this.loadPagination({
                 hasPreviousPage : res.hasPreviousPage,
                 prePage         : res.prePage,
                 hasNextPage     : res.hasNextPage,
                 nextPage        : res.nextPage,
                 pageNum         : res.pageNum,
                 pages           : res.pages
-            });
+            });*/
         }, function(errMsg){
             _mm.errorTips(errMsg);
         });
     },
 
-    loadPagination: function(pageInfo){
+    /*loadPagination: function(pageInfo){
         var _this = this;
         this.pagination ? '' : (this.pagination = new Pagination());
         this.pagination.render($.extend({}, pageInfo, {
             container : $('.pagination'),
             onSelectPage : function(pageNum){
                 _this.data.listParam.pageNum = pageNum;
-                _this.loadList();
+                _this.onLoad();
             }
         }));
-    },
+    },*/
 
     bindEvent: function(){
         var _this = this;

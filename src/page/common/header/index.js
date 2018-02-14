@@ -39,7 +39,7 @@ const header = {
         } else {
             _mm.goHome();
         }
-    },
+    }
 };
 
 module.exports = header;
