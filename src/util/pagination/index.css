@@ -6,7 +6,7 @@
     text-align:center;
     color:#333;
 }
-.page-content{
+.pg-content .pg-item{
     display:inline-block;
     margin:0 2px;
     padding:0 15px;

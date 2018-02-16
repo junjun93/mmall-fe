@@ -40,7 +40,7 @@ const _mm = {
     getServerUrl: function(path){
         return conf.serverHost + path;
     },
-    //获取url参数 4-3 03:28
+    //获取url参数 4-3 03:28 后台解码
     getUrlParam: function(name){
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
         var result = window.location.search.substr(1).match(reg);

@@ -15,7 +15,7 @@ const Pagination = function(){
         pageRange       : 3,
         onSelectPage    : null  //报错
     };
-    // 事件的处理
+    // 事件的处理，事件代理、委托
     $(document).on('click', '.pg-item', function(){
         var $this = $(this);
         // 对于active和disabled按钮点击，不做处理

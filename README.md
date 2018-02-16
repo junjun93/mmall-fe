@@ -152,5 +152,34 @@ a字体不继承，input行高、字体不继承
 
     unslider 
     
+1.list列表查不到，Charles代理地址写错，多写了一个心
+    反例：localhost:8088/product/*-->www.happymmall.com:80/product/*
+    正例：localhost:8088/product/*-->www.happymmall.com:80/product/
+    
+2.分页实现不了,pagination/index.string漏代码、type改为value
+    反例：
+    {{#active}}
+        <span class="pg-item active" data-type="{{value}}">{{name}}</span>
+    {{^active}}
+        <span class="pg-item" data-type="{{value}}">{{name}}</span>
+    {{/active}}
+    正例：
+    {{#active}}
+        <span class="pg-item active" data-value="{{value}}">{{name}}</span>
+    {{/active}}
+    {{^active}}
+        <span class="pg-item" data-value="{{value}}">{{name}}</span>
+    {{/active}}
 
+this.pagination ? '' : (this.pagination = new Pagination());
 
+3.搜索框回填实现不了
+//module.exports = header;
+header.init();
+    init方法必须要调用的，才能执行那些逻辑，光export只是输出出去了
+    异步接口加载的页面，页面一出来是绑定不上事件的，要用事件代理
+    mouseenter mouseover hover 
+    
+    订单确认页最难
+    
+    

@@ -17,6 +17,7 @@ const header = {
     },
     onLoad: function () {
         var keyword = _mm.getUrlParam('keyword');
+        console.log('a'+keyword);
         if (keyword) {
             $('#search-input').val(keyword);
         }
@@ -26,7 +27,7 @@ const header = {
         $('#search-btn').click(function () {
             _this.searchSubmit();
         }),
-            $('#search-btn').keyup(function (e) {
+            $('#search-input').keyup(function (e) {
                 if (e.keyCode === 13) {
                     _this.searchSubmit();
                 }
@@ -42,4 +43,4 @@ const header = {
     }
 };
 
-module.exports = header;
+header.init();
