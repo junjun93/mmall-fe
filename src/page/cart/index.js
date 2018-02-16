@@ -4,7 +4,6 @@
 */
 'use strict';
 require('./index.css');
-require('page/common/nav/index.js');
 require('page/common/header/index.js');
 const nav           = require('page/common/nav/index.js');
 const _mm           = require('util/mm.js');

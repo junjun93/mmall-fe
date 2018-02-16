@@ -26,6 +26,7 @@ const config = {
         'list'              : ['./src/page/list/index.js'],
         'detail'            : ['./src/page/detail/index.js'],
         'cart'              : ['./src/page/cart/index.js'],
+        'order-confirm'     : ['./src/page/order-confirm/index.js'],
         'user-login'        : ['./src/page/user-login/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
