@@ -34,7 +34,7 @@ const page = {
             _mm.errorTips(errMsg);
         });
     }
-}
+};
 
 $(function(){
     page.init();
