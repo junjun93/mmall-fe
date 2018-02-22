@@ -73,7 +73,7 @@ const _cart = {
     // 取消选中全部商品
     unSelectAllProduct: function(resolve, reject){
         _mm.request({
-            url     : _mm.getServerUrl('/cart/select_all.do'),
+            url     : _mm.getServerUrl('/cart/un_select_all.do'),
             success : resolve,
             error   : reject
         });

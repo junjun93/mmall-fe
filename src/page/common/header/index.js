@@ -17,7 +17,6 @@ const header = {
     },
     onLoad: function () {
         var keyword = _mm.getUrlParam('keyword');
-        console.log('a'+keyword);
         if (keyword) {
             $('#search-input').val(keyword);
         }

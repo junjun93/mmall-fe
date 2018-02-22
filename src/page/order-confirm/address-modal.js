@@ -73,7 +73,7 @@ const addressModal = {
     },
     loadProvince: function(){
         var provinces       = _cities.getProvinces() || [],
-            $provinceSelect = _this.$modalWrap.find('#receiver-province');
+            $provinceSelect = this.$modalWrap.find('#receiver-province');
         $provinceSelect.html(this.getSelectOption(provinces));
         // 如果有省份信息，回填
         if(this.option.isUpdate && this.option.data.receiverProvince){
@@ -83,8 +83,8 @@ const addressModal = {
     },
     loadCities: function(provinceName){
         var cities      = _cities.getCities(provinceName) || [],
-            $citySelect = _this.$modalWrap.find('#receiver-city');
-        $citySelect.html(this.option.data.receiverCity);
+            $citySelect = this.$modalWrap.find('#receiver-city');
+        $citySelect.html(this.getSelectOption(cities));
         if(this.option.isUpdate && this.option.data.receiverCity){
             $citySelect.val(this.option.data.receiverCity);
         }
@@ -92,7 +92,7 @@ const addressModal = {
     // 获取表单里的收件人信息，并做表单的验证
     getReceiverInfo: function(){
         var receiverInfo    = {},
-            reusult         = {
+            result         = {
                 status : false
             };
         receiverInfo.receiverName       = $.trim(this.$modalWrap.find('#receiver-name').val());

@@ -43,7 +43,7 @@ const page = {
         });
         // 商品的全选/取消全选
         $(document).on('click', '.cart-select-all', function(){
-           var $this = this;
+           var $this = $(this);
             if($this.is(':checked')){
                 _cart.selectAllProduct(function(res){
                     _this.renderCart(res);
@@ -51,7 +51,7 @@ const page = {
                     _this.showCartError();
                 });
             }else{
-                _cart.unSelectAllProduct(productId, function(res){
+                _cart.unSelectAllProduct(function(res){
                     _this.renderCart(res);
                 }, function(){
                     _this.showCartError();
@@ -59,12 +59,14 @@ const page = {
             }
         });
         // 商品数量的变化
-        $(document).on('click', '.cart-btn', function(){
-            var $this       = this,
+        $(document).on('click', '.count-btn', function(){
+            //选择器缓存与this缓存
+            var $this       = $(this),
                 $pCount     = $this.siblings('.count-input'),
                 currCount   = parseInt($pCount.val()),
                 type        = $this.hasClass('plus') ? 'plus' : 'minus',
-                productId   = $this.parents('.cart-table').data('.product-id'),
+                                                            //加与不加.
+                productId   = $this.parents('.cart-table').data('product-id'),
                 minCount    = 1,
                 maxCount    = parseInt($pCount.data('max')),
                 newCount    = 0;
@@ -105,7 +107,7 @@ const page = {
                // 循环查找选中的productIds
                for(var i=0, iLength = $selectedItem.length; i<iLength; i++){
                    //?
-                   arrProductIds.push($($selectedItem[i]).parents('.cart-table').data('.product-id'));
+                   arrProductIds.push($($selectedItem[i]).parents('.cart-table').data('product-id'));
                }
                if(arrProductIds.length){
                    _this.deleteCartProduct(arrProductIds.join(','));
@@ -119,7 +121,7 @@ const page = {
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
                 window.location.href = './order-confirm.html';
             }else{
-                _mm.errorTips('请选择商品后在提交');
+                _mm.errorTips('请选择商品后再提交');
             }
         });
     },

@@ -3,7 +3,6 @@
     @Date: 2018/2/16
 */
 'use strict';
-require('./index.css');
 const _mm = require('util/mm.js');
 
 const _address = {

@@ -13,9 +13,7 @@ const templateIndex = require('./index.string');
 
 const page = {
     data: {
-        listParam: {
-            productId : _mm.getUrlParam('productId') || '',
-        }
+        productId : _mm.getUrlParam('productId') || ''
     },
     init: function(){
         this.onLoad();

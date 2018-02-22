@@ -4,6 +4,9 @@
 */
 
 /*地址部分的样式*/
+.address-con{
+    overflow:hidden;
+}
 .address-item,
 .address-add{
     margin:20px 20px 0 0;
@@ -35,7 +38,7 @@
     overflow:hidden;
 }
 .address-item .address-opera{
-    text-align:center;
+    text-align:right;
     visibility:hidden;
 }
 .address-item:hover .address-opera{

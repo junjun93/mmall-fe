@@ -92,7 +92,7 @@
 }
 .intro-wrap .p-info-con .p-count-con .p-count-btn{
     position:absolute;
-    left:15px;
+    left:115px;
     display:block;
     width:20px;
     height:15px;
@@ -105,10 +105,10 @@
     user-select:none;
 }
 .intro-wrap .p-info-con .p-count-con .p-count-btn.plus{
-    top:0;
+    top:5px;
 }
 .intro-wrap .p-info-con .p-count-con .p-count-btn.minus{
-    bottom:0;
+    bottom:7px;
 }
 
 /*商品详细信息*/

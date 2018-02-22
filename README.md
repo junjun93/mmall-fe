@@ -180,6 +180,6 @@ header.init();
     异步接口加载的页面，页面一出来是绑定不上事件的，要用事件代理
     mouseenter mouseover hover 
     
-    订单确认页最难
+    订单确认页最难,该页购物车数量回填问题
     
     
