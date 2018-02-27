@@ -42,7 +42,7 @@ const page = {
         validateResult = this.formValidate(formData);
         if(validateResult.status){
             _user.login(formData, function(){
-                window.location.href = _mm.getUrlParam('redirect') || './index.string';
+                window.location.href = _mm.getUrlParam('redirect') || './index.html';
             }, function(errMsg){
                 formError.show(errMsg);
             });

@@ -28,7 +28,6 @@ const page = {
         navSide.init({
             name: 'order-list'
         });
-        this.loadUserInfo();
     },
 
     // 加载订单列表
