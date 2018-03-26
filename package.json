@@ -4,8 +4,8 @@
   "description": "you already win!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "dist": "WEBPACK_ENV=online webpack -p",
     "build": "webpack"
   },
 
