@@ -14,7 +14,7 @@ const nav = {
     init: function(){
         this.bindEvent();
         this.loadUserInfo();
-        //this.loadCartCount();
+        this.loadCartCount();
         return this;
     },
     bindEvent: function(){

@@ -1,5 +1,5 @@
 {
-  "name": "mmall_front",
+  "name": "mmall-fe",
   "version": "1.0.0",
   "description": "you already win!",
   "main": "index.js",
@@ -8,16 +8,7 @@
     "start": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/junjun93/mmall_front.git"
-  },
-  "author": "junjun",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/junjun93/mmall_front/issues"
-  },
-  "homepage": "https://github.com/junjun93/mmall_front#readme",
+
   "devDependencies": {
     "css-loader": "^0.28.9",
     "csv-loader": "^2.1.1",
