@@ -1,0 +1,19 @@
+/*
+    @Author: junjun
+    @Date: 2018/2/2
+    @Last Modified by: junjun
+    @Last Modified time: 2018/2/2
+*/
+.nav-simple{
+    height:60px;
+    line-height:60px;
+    border:1px solid #ddd;
+    background:#fff;
+}
+
+.nav-simple .logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#c60023;
+    text-decoration:none;
+}
