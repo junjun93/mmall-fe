@@ -41,7 +41,7 @@ const config = {
     },
     output: {
         path        : __dirname + '/dist',
-        publicPath  : '/dist/',
+        publicPath  : 's.junjun.fun/dist/',
         filename    : 'js/[name].js'
     },
     externals: {
