@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "you already win!",
   "main": "index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junjun93/mmall_front.git"
+  },
   "scripts": {
     "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
     "dist": "WEBPACK_ENV=online webpack -p",
