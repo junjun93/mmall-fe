@@ -41,7 +41,7 @@ const config = {
     },
     output: {
         path        : __dirname + '/dist',
-        publicPath  : 's.junjun.fun/dist/',
+        publicPath  : WEBPACK_ENV === 'online' ? '//s.junjun.fun/mmall-fe/dist/' : '/dist/',
         filename    : 'js/[name].js'
     },
     externals: {
